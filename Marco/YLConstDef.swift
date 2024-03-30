@@ -10,35 +10,36 @@ import UIKit
 import AVFoundation
 
 typealias YLResultBlock = (_ result: Any) -> Void
+typealias YLSenderBlock = (_ sender: Any) -> Void
 
 //数字
-let YLNum: String = "0123456789";
+let YLNum: String = "0123456789"
 //字母
-let YLAlpha: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+let YLAlpha: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 //数字和字母
-let YLAlphaNum: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+let YLAlphaNum: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 
-let YLApplictionShared = UIApplication.shared;
-let YLAppDelegate = YLApplictionShared.delegate as! AppDelegate;
+let YLApplictionShared = UIApplication.shared
+let YLAppDelegate = YLApplictionShared.delegate as! AppDelegate
 let YLKeyWindow = YLApplictionShared.windows[0]
-let YLNotificationCenter = Foundation.NotificationCenter.default;
-let YLUserDefaults = Foundation.UserDefaults.standard;
+let YLNotificationCenter = Foundation.NotificationCenter.default
+let YLUserDefaults = Foundation.UserDefaults.standard
 let YLMainBundle = Bundle.main;
 
 // MARK: Device
 let YLCurrentDevice = UIDevice.current
 
-let YLDeviceName: String = YLCurrentDevice.name;
+let YLDeviceName: String = YLCurrentDevice.name
 
-let YLDeviceSystemName: String = YLCurrentDevice.systemName;
+let YLDeviceSystemName: String = YLCurrentDevice.systemName
 
-let YLDeviceVersion = (YLCurrentDevice.systemVersion as NSString).floatValue;
+let YLDeviceVersion = (YLCurrentDevice.systemVersion as NSString).floatValue
 
-let YLDeviceModel: String = YLCurrentDevice.model;
+let YLDeviceModel: String = YLCurrentDevice.model
 
-let YLDeviceLanguage: String = Locale.preferredLanguages.first!;
+let YLDeviceLanguage: String = Locale.preferredLanguages.first!
 
-let YLLocaleIdentifier: String = Locale.current.identifier;
+let YLLocaleIdentifier: String = Locale.current.identifier
 
 let YL_IS_IPhoneX_All = UIDevice.isIPhoneXSeries()
 

@@ -74,7 +74,7 @@ class YLAddressView: YLBasePopView {
         for i in 0..<selectedTitles.count {
             let titleView = UIView(frame: .zero)
             titleView.tag = i
-            titleView.addTapGestureRecognizer {[weak self] sender in
+            titleView.addTapGestureRecognizer {[weak self] _ in
                 self?.loadAddressData(index: i)
             }
             

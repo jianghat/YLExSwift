@@ -9,7 +9,7 @@ import UIKit
 import SwiftDate
 
 extension Date {
-    func toFormat(_ dateFormat: String) -> String {
+    func toFormat(_ dateFormat: String = "yyyy-MM-dd") -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "zh_CN")
         formatter.dateFormat = dateFormat
@@ -18,7 +18,7 @@ extension Date {
 }
 
 extension String {
-    static func minutesAndSeconds(seconds: Int) -> String {
+    static func mmSS(seconds: Int) -> String {
         let minutes = (seconds) % 3600 / 60
         let second = (seconds) % 60
         let str  = String(format: "%02lu:%02lu",minutes, second)

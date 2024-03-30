@@ -13,7 +13,7 @@ extension UIControl {
     }
     
     func controlEvents(controlEvents: UIControl.Event, handler: @escaping YLSenderBlock) {
-        let target = YLBlockTarget.init(block: handler);
+        let target = YLBlockTarget(block: handler)
         objc_setAssociatedObject(self, YLControlKey.KEY_Action, target, .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         self.addTarget(self, action: #selector(actionFunction), for: controlEvents);
     }
@@ -32,7 +32,7 @@ extension UIGestureRecognizer {
     }
     
     func gestureRecognizerHandle(handler: @escaping YLSenderBlock) {
-        let target = YLBlockTarget.init(block: handler);
+        let target = YLBlockTarget(block: handler)
         objc_setAssociatedObject(self, YLGestureRecognizerKey.KEY_Action, target, .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         self.addTarget(self, action: #selector(gestureActionFunction))
     }
