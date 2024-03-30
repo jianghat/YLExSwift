@@ -18,5 +18,6 @@ Pod::Spec.new do |s|
   s.dependency 'MJRefresh'
   s.dependency 'RxSwift'
   s.dependency 'HandyJSON'
+  s.dependency 'YYKit'
 
 end
