@@ -56,13 +56,11 @@ extension UIViewController {
      *
      *  @return UIButton
      */
-    @discardableResult
-    func setLeftBarButtonItem(imageName: Any, actionBlock: @escaping YLSenderBlock) -> UIButton {
+    @discardableResult func setLeftBarButtonItem(imageName: Any, actionBlock: @escaping YLSenderBlock) -> UIButton {
         return setLeftBarButtonItem(imageName: imageName, highlightedName: imageName, actionBlock: actionBlock)
     }
     
-    @discardableResult
-    func setLeftBarButtonItem(imageName: Any, highlightedName: Any?, actionBlock: @escaping YLSenderBlock) -> UIButton {
+    @discardableResult func setLeftBarButtonItem(imageName: Any, highlightedName: Any?, actionBlock: @escaping YLSenderBlock) -> UIButton {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: YLNavItemWidth, height: YLNavHeight));
         if imageName is UIImage {
             button.setImage(imageName as? UIImage, for: .normal)
